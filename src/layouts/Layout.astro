@@ -1,0 +1,85 @@
+---
+import "@fontsource/poppins";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { description, title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="view-transition" content="same-origin" />
+
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <Footer />
+    <style is:global>
+      :root {
+        color-scheme: ligth dark;
+      }
+      * {
+        min-width: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+      }
+      body::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: rgb(26, 25, 25); /* color of the tracking area */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: blue; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 3px solid rgb(32, 32, 32); /* creates padding around scroll thumb */
+      }
+      body {
+        width: 100%;
+        background-image: url(../../public/bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        min-height: 100dvh;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+      p {
+        text-wrap: pretty;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+
+import { Form } from "../components/Form";
+import Skill from "../components/Skill.astro";
+---
+
+<Layout
+  title="Porfolio Umpi-Ingeniaro informático y Desarrollador Web"
+  description="Contacta con Reineldi para crear diferentes sitios web">
+  <Header />
+  <main class="mt-6 scroll-mt-36" id="home">
+    <Hero />
+    <About />
+    <Projects />
+    <Skill />
+    <Form client:load />
+  </main>
+</Layout>
