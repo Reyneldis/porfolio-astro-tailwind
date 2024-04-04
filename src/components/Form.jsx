@@ -25,41 +25,41 @@ export const Form = () => {
     <>
       <section
         id="contact"
-        class="flex justify-center m-auto py-20 xl:w-[80%] sm:w-full xs:w-[75%]">
-        <div class="sm:w-[50%] xs:w-full">
-          <h2 class="text-5xl font-bold mb-3 w-fit bg-clip-text text-center text-transparent bg-gradient-to-r from-purple-600 from-30% via-orange-500 via-70% to-orange-400">
-            Contactame
+        className="flex justify-center  m-auto py-20 xl:w-[60%] xs:w-[85%]">
+        <div className="sm:w-[50%] xs:w-full">
+          <h2 class="text-5xl font-bold mb-3 w-fit bg-clip-text  text-transparent bg-gradient-to-r from-purple-600 from-30% via-orange-500 via-70% to-orange-400">
+            Contáctame
           </h2>
-          <p class="opacity-50 lg:text-pretty">
+          <p className="opacity-50">
             No dude en comunicarme para colaborar, realizar consultas o
             simplemente conversar de manera amigable en cualquier momento.
           </p>
-          <form class="flex flex-col py-4" ref={form} onSubmit={sendEmail}>
-            <label class="font-bold  text-[17px] opacity-90">Nombre</label>
+          <form className="flex flex-col py-4" ref={form} onSubmit={sendEmail}>
+            <label className="font-bold  text-[17px] opacity-90">Nombre</label>
             <input
-              class="bg-transparent border-violet-400 border-2 
+              className="bg-transparent border-violet-400 border-2 
                  placeholder:text-violet-400 px-3 py-[5px] rounded-md mb-3 hover:border-violet-500 md:w-[80%] xs:w-full"
               type="text"
               name="nombre"
               placeholder="Nombre..."
             />
-            <label class="font-bold text-[17px] opacity-90">Correo</label>
+            <label className="font-bold text-[17px] opacity-90">Correo</label>
             <input
-              class="bg-transparent border-violet-400 border-2 
+              className="bg-transparent border-violet-400 border-2 
                  placeholder:text-violet-400 px-3 py-[5px] rounded-md hover:border-violet-500 mb-3 md:w-[80%] xs:w-full"
               type="email"
               name="correo"
               placeholder="abs@gmail.com"
             />
-            <label class="font-bold text-[17px] opacity-90">Mensaje</label>
+            <label className="font-bold text-[17px] opacity-90">Mensaje</label>
             <textarea
-              class="bg-transparent border-violet-400 border-2 
+              className="bg-transparent border-violet-400 border-2 
                  placeholder:text-violet-400 px-3 py-[5px] rounded-md hover:border-violet-500 mb-3 md:w-[80%] xs:w-full"
               name="mensaje"
               placeholder="Escribe..."
             />
             <button
-              class="rounded-full border border-violet-500 bg-transparent w-fit px-8 py-1 my-4 hover:scale-110 hover:bg-violet-950 focus:ring-blue-300 transition-all dark:focus:ring-blue-800"
+              className="rounded-full border border-violet-500 bg-transparent w-fit px-8 py-1 my-4 hover:scale-110 hover:bg-violet-950 focus:ring-blue-300 transition-all dark:focus:ring-blue-800"
               type="submit"
               id="button">
               Enviar
@@ -67,8 +67,8 @@ export const Form = () => {
           </form>
         </div>
         <img
-          class="h-[220px] self-center md:w-[20%] xs:w-0"
-          src="../../public/laptop2.svg"
+          className=" object-cover w-full h-auto self-center md:w-[20%] xs:w-0"
+          src="../../public/email.svg"
           alt="imagen de laptop"
         />
       </section>

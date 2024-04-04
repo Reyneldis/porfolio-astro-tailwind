@@ -5,10 +5,10 @@ import { projects } from "../assets/data";
 
 export function getStaticPaths() {
   return [
-    { params: { id: "xiaomi1" } },
-    { params: { id: "xiaomi2" } },
-    { params: { id: "xiaomi3" } },
-    { params: { id: "xiaomi4" } },
+    { params: { id: "uber" } },
+    { params: { id: "bici" } },
+    { params: { id: "moto" } },
+    { params: { id: "gym" } },
   ];
 }
 
@@ -17,18 +17,20 @@ console.log(card);
 ---
 
 <Layout title={`Projec | ${id}`}>
-  <main
+  <!-- <main
     class="relative flex items-center lg:h-screen xs:h-fit"
-    transition:name={`image-${id}`}
+    transition:name={`image-${id}.jpg`}
     transition:persist>
     <div class="flex justify-center items-center w-full h-[80%] xs:h-fit">
       <div
         class="flex gap-x-10 2xl:mt-2 2xl:w-3/4 2xl:h-fit xl:w-4/5 lg:mt-0
       lg:flex-row lg:h-[90%] xs:w-4/5 xs:flex-col-reverse">
         <img
-          src={`${id}.webp`}
+          src={`${id}.jpg`}
           alt="foto de el proyecto"
-          class="aspect-square object-cover rounded-xl object-top mx-auto hover:scale-[105%] transition-all lg:mb-0 lg:mt-0 sm:w-[850px] xxs:mt-10 xs:w-[80%] xs:mt-20 xs:mb-5"
+          class="aspect-square object-cover rounded-xl object-top mx-auto 
+          hover:scale-[105%] transition-all lg:mb-0 lg:mt-0 sm:w-[850px] 
+          xxs:mt-10 xs:w-[80%] xs:mt-20 xs:mb-5"
         />
         <div class="flex flex-col gap-y-3 relative lg:py-0 xs:py-7">
           <h1 class="text-xl pt-9 font-black">{card.title}</h1>
@@ -58,6 +60,56 @@ console.log(card);
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </main> -->
+
+  <main
+    class="grid mx-auto max-w-4xl"
+    transition:name={`image-${id}.jpg`}
+    transition:persist>
+    <header class="relative top-0 py-8 flex justify-center items-center">
+      <h1 class="font-bold md:text-4xl text-center py-8 px-4 xs:text-3xl">
+        Proyecto
+        <strong class="opacity-80 text-orange-500">
+          {card.title}
+        </strong>
+      </h1>
+      <div class="absolute flex flex-col top-18 left-2">
+        <a
+          href={`/#${id}`}
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          <svg
+            class="w-4 h-4 rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+          <span class="sr-only">Volver</span>
+        </a>
+      </div>
+    </header>
+    <div
+      class="grid lg:grid-cols-2 gap-8 px-8 sm:max-w-[700px] m-auto lg:flex-row xs:grid-cols-1">
+      <div class="w-full h-auto">
+        <img
+          src={`${id}.jpg`}
+          alt="foto de el proyecto"
+          class="object-cover hover:contrast-100 aspect-[450/500] mx-auto rounded-xl h-auto hover:scale-[105%]
+           transition-all lg:w-[600px] md:w-[650px] sm:w-[750px] xs:w-[80%] xs:mb-5"
+        />
+      </div>
+      <div class="w-full lg:px-4 xs:px-2 lg:py-0 xs:py-7 mb-12">
+        <h1 class="text-4xl font-semibold opacity-90 mb-4">{card.title}</h1>
+        <p class="opacity-70">{card.description}</p>
       </div>
     </div>
   </main>

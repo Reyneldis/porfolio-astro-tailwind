@@ -1,30 +1,30 @@
 export const projects = [
   {
-    title: "Xiomi-13",
+    title: "Uber",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error dolorum officia natus, voluptatem praesentium illo itaque expedita distinctio eaque possimus eos odit ad aliquid minima tenetur esse explicabo ab ",
-    image: "xiaomi1",
+    image: "uber",
     color: "#ee7c17",
   },
   {
-    title: "Xiaomi Note-13",
+    title: "Moto",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error dolorum officia natus, voluptatem praesentium illo itaque expedita distinctio eaque possimus eos odit ad aliquid minima tenetur esse explicabo ab exercitationem quaerat ducimus. Excepturi nulla facere eius a accusantium molestias dignissimos laboriosam, ",
-    image: "xiaomi2",
+    image: "moto",
     color: "#121234",
   },
   {
-    title: "Samsung",
+    title: "Bici",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error dolorum officia natus, voluptatem praesentium illo itaque expedita distinctio eaque possimus eos odit ad aliquid minima tenetur esse explicabo ab exercitationem quaerat ducimus. Excepturi nulla facere eius a accusantium molestias dignissimos laboriosam, ",
-    image: "xiaomi3",
+    image: "bici",
     color: "#121234",
   },
   {
-    title: "Nokia",
+    title: "Gym",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error dolorum officia natus, voluptatem praesentium illo itaque expedita distinctio eaque possimus eos odit ad aliquid minima tenetur esse explicabo ab exercitationem quaerat ducimus. Excepturi nulla facere eius a accusantium molestias dignissimos laboriosam, ,",
-    image: "xiaomi4",
+    image: "gym",
     color: "#121234",
   },
 ];
